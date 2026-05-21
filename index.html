@@ -5,32 +5,32 @@
     </head>
     <body>
         <div class="scoreboard">
-            <div id="timer">
-                <h1>10:00</h1>
-            </div>
+            <div id="timer">10:00</div>
 
            <div class="container">
-              <div class="team">
-                 <h1>HOME</h1>
+              <div class="team lakers">
+                 <h1 contenteditable="true" spellcheck="false">LAKERS</h1>
                  <div class="score" id="home-score">0</div>
                  <div class="btn">
+                   <button onclick="addPoints('home',-1)">-1</button>
                    <button onclick="addPoints('home',1)">+1</button>
                    <button onclick="addPoints('home',2)">+2</button>
                    <button onclick="addPoints('home',3)">+3</button>
                  </div>
                </div>
-              <div class="team">
-                 <h1>GUEST</h1>
+              <div class="team celtics">
+                 <h1 contenteditable="true" spellcheck="false">CELTICS</h1>
                  <div class="score" id="guest-score">0</div>
                  <div class="btn">
+                   <button onclick="addPoints('guest',-1)">-1</button>
                    <button onclick="addPoints('guest',1)">+1</button>
                    <button onclick="addPoints('guest',2)">+2</button>
                    <button onclick="addPoints('guest',3)">+3</button>
                    </div>
               </div>
-           
             </div>
-               <div class="reset-container">
+               <div class="game-controls">
+                   <button id="start-btn" onclick="startGame()">START</button>
                    <button onclick="resetScore()">RESET</button>
                </div>
        </div>
